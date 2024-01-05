@@ -81,7 +81,7 @@ func main() {
 			}
 		}
 
-		fmt.Printf("Search results: %v\n", results) // And this line
+		fmt.Printf("Search results: %v\n", results)
 
 		template := template.Must(template.ParseFiles("./src/search-books.html")) // Parse the HTML template file
 		template.Execute(w, map[string][]Book{"Books": results})
