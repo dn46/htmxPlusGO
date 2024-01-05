@@ -39,7 +39,7 @@ func main() {
 
 	handler := func(w http.ResponseWriter, r *http.Request) { // Handler function; takes a ResponseWriter and a Request
 
-		template := template.Must(template.ParseFiles("./src/index.html")) // Parse the HTML template file
+		template := template.Must(template.ParseFiles("./templates/index.html")) // Parse the HTML template file
 
 		// books := map[string][]Book{ // type map with string keys and Book values
 		// 	"Books": {
@@ -63,7 +63,7 @@ func main() {
 		author := r.FormValue("author") // Get the author value from the form
 
 		//template fragments instead of htmlString
-		template := template.Must(template.ParseFiles("./src/index.html")) // Parse the HTML template file
+		template := template.Must(template.ParseFiles("./templates/index.html")) // Parse the HTML template file
 		template.ExecuteTemplate(w, "book-list-element", Book{Title: title, Author: author})
 
 		log.Print("Book added!")
@@ -83,7 +83,7 @@ func main() {
 
 		fmt.Printf("Search results: %v\n", results)
 
-		template := template.Must(template.ParseFiles("./src/search-books.html")) // Parse the HTML template file
+		template := template.Must(template.ParseFiles("./templates/search-books.html")) // Parse the HTML template file
 		template.Execute(w, map[string][]Book{"Books": results})
 	}
 
