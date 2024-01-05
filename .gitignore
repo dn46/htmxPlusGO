@@ -1,0 +1,22 @@
+# Binaries, plugins, libs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output directories
+/dist
+/build
+
+# Dependency directories
+/vendor
+
+# IDEs
+/.vscode
+/.idea
+
+# OS-specific files
+.DS_Store
+Thumbs.db
